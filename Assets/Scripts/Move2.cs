@@ -7,11 +7,14 @@ public class Move2 : MonoBehaviour
 
 	[SerializeField] private Vector3 velocity;
 	[SerializeField] private float moveSpeed = 10.0f;
-	
-	// Use this for initializationN
-	void Start () {
-		
-	}
+
+    AudioSource audioSource;
+    public AudioClip seHit;
+
+    // Use this for initializationN
+    void Start () {
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,4 +40,12 @@ public class Move2 : MonoBehaviour
 			transform.position += velocity;
 		}		
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Bullet")
+        {
+            audioSource.PlayOneShot(seHit);
+        }
+    }
 }
