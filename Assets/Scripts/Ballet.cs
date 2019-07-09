@@ -35,12 +35,18 @@ public class Ballet : MonoBehaviour
 
 	// 弾丸の速度
 	public float bullet_speed = 1000;
+
+    // SE
+    public AudioClip seNoriShot;
+    public AudioClip seButaShot;
+    public AudioClip seNarutoShot;
+    AudioSource audioSource;
 	
 	// Use this for initializationN
 	void Start ()
 	{
-
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -65,6 +71,9 @@ public class Ballet : MonoBehaviour
 			// Rigidbodyに力を加えて発射
 			bullets1.GetComponent<Rigidbody>().AddForce(force);
 
+            // SE鳴らす
+            audioSource.PlayOneShot(seNoriShot);
+
 			// 弾丸の位置を調整
 			bullets1.transform.position = muzzle.position;
 			
@@ -84,8 +93,11 @@ public class Ballet : MonoBehaviour
 			// Rigidbodyに力を加えて発射
 			bullets2.GetComponent<Rigidbody>().AddForce(force);
 
-			// 弾丸の位置を調整
-			bullets2.transform.position = leftButaMuzzle.position;
+            // SE鳴らす
+            audioSource.PlayOneShot(seButaShot);
+
+            // 弾丸の位置を調整
+            bullets2.transform.position = leftButaMuzzle.position;
 
 			leftButaShotTmpTime = 0;
 		}
@@ -103,8 +115,11 @@ public class Ballet : MonoBehaviour
 			// Rigidbodyに力を加えて発射
 			bullets2.GetComponent<Rigidbody>().AddForce(force);
 
-			// 弾丸の位置を調整
-			bullets2.transform.position = rightButaMuzzle.position;
+            // SE鳴らす
+            audioSource.PlayOneShot(seButaShot);
+
+            // 弾丸の位置を調整
+            bullets2.transform.position = rightButaMuzzle.position;
 
 			rightButaShotTmpTime = 0;
 
@@ -123,8 +138,11 @@ public class Ballet : MonoBehaviour
 			// Rigidbodyに力を加えて発射
 			bullets3.GetComponent<Rigidbody>().AddForce(force);
 
-			// 弾丸の位置を調整
-			bullets3.transform.position = muzzle.position;
+            // SE鳴らす
+            audioSource.PlayOneShot(seNarutoShot);
+
+            // 弾丸の位置を調整
+            bullets3.transform.position = muzzle.position;
 
 			narutoShotTmpTime = 0;
 		}

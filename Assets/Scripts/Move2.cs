@@ -7,11 +7,10 @@ public class Move2 : MonoBehaviour
 
 	[SerializeField] private Vector3 velocity;
 	[SerializeField] private float moveSpeed = 10.0f;
-	
-	// Use this for initializationN
-	void Start () {
-		
-	}
+
+    // Use this for initialization
+    void Start () {
+    }
 	
 	// Update is called once per frame
 	void Update () {
