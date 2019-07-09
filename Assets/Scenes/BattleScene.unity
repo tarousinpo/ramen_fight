@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: 362498920}
   - component: {fileID: 362498919}
   - component: {fileID: 362498918}
+  - component: {fileID: 362498923}
   - component: {fileID: 362498922}
   m_Layer: 0
   m_Name: Player1
@@ -690,7 +691,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
   moveSpeed: 10
-  seHit: {fileID: 8300000, guid: 5799b39a01af65f479c03b93f10da989, type: 3}
 --- !u!65 &362498919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -832,6 +832,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &362498923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362498917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f1ef1a240704a4d8f12c8fdcf3bbd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seHit: {fileID: 8300000, guid: 19de7364014bf124f8f06a554fcb20e6, type: 3}
 --- !u!1 &447351074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,6 +3227,7 @@ GameObject:
   - component: {fileID: 1907196337}
   - component: {fileID: 1907196336}
   - component: {fileID: 1907196338}
+  - component: {fileID: 1907196340}
   - component: {fileID: 1907196339}
   m_Layer: 0
   m_Name: Player2
@@ -3317,7 +3331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
   moveSpeed: 10
-  seHit: {fileID: 8300000, guid: 5799b39a01af65f479c03b93f10da989, type: 3}
 --- !u!82 &1907196339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3414,6 +3427,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1907196340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907196333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f1ef1a240704a4d8f12c8fdcf3bbd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seHit: {fileID: 8300000, guid: 19de7364014bf124f8f06a554fcb20e6, type: 3}
 --- !u!1 &1918217974
 GameObject:
   m_ObjectHideFlags: 0
